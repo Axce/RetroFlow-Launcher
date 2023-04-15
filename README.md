@@ -1,3 +1,17 @@
+# Fork information
+
+This is a fork of jimbob4000's RetroFlow-Launcher, with alternative controls :
+* **DOWN**: Next category
+* **UP**: Previous category
+* **SQUARE**: Skip to favorites
+
+Instead of the original :
+* **SQUARE**: Next category
+* **DOWN+SQUARE**: Previous category
+*  **UP**: Skip to favorites
+
+If you'd like to use this fork, just replace `ux0:/app/RETROFLOW/index.lua` by [the one in this repo](src/index.lua).
+
 
 # RetroFlow Launcher
 
