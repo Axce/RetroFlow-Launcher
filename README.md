@@ -89,9 +89,6 @@ For best results it's recommended that your games are named using the **no-intro
  * Dreamcast:  '.gdi' and '.cdi' games are supported.
  * PS1 using RetroArch - They will use the 'PCSX ReARMed' core, more information on supported extensions here: [https://docs.libretro.com/library/pcsx_rearmed/](https://docs.libretro.com/library/pcsx_rearmed/)
 
-**Note:** 
-If you're using an old version of RetroFlow (below v5) you will need to rename PSP and maybe PS1 games too, please see the guide here: [Legacy guide - Renaming PSP and PS1](https://github.com/jimbob4000/RetroFlow-Launcher/blob/main/docs/Legacy_guide_-_Renaming_PSP_and_PS1.md). 
-
 ## 5. Rescan to find your games
 
 * Press 'Start' and go to 'Scan Settings', select your Adrenaline location, and if you are using custom game folders, select those too, then select 'Rescan'.
@@ -128,6 +125,11 @@ Navigate your library using the **DPad** or the **Left Stick** or with the **Tou
 **DPad Down + Square**: Go back one category
 
 **DPad Down + L/R triggers**: Skip games alphabetically
+
+
+# Troubleshooting
+
+Please see the [FAQ's](https://github.com/jimbob4000/RetroFlow-Launcher/blob/main/docs/FAQs.md) page before positing an issue.
 
 # Customisation
 
@@ -213,3 +215,9 @@ Please feel free to build upon the mod as long as you provide credit to the orig
 I don't accept dontations or payment for this project, however if you would like to support VitaHex; the developer of the original HexFlow app you can support their work by becoming a [Patron](https://www.patreon.com/vitahex).
 
 You can also donate to them using [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RM8ECMVYMTXGJ&source=url). If you would like to follow them, you can find VitaHex on [Twitter](https://twitter.com/VitaHex), or their website [vitahex.weebly.com](https://vitahex.weebly.com/).
+
+**Disclaimer:**
+<br>
+RetroFlow DOES NOT support or facilitate piracy in any way, on the contrary we are against it.
+ 
+RetroFlow and any individual software authors will not be held responsible for any damages or loss resulting from the use of the homebrew software, by downloading the application you are agreeing to these terms.
