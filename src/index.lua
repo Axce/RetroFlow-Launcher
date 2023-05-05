@@ -6,7 +6,7 @@ local oneLoopTimer = Timer.new()
 
 dofile("app0:addons/threads.lua")
 local working_dir = "ux0:/app"
-local appversion = "6.0"
+local appversion = "6.0.1"
 function System.currentDirectory(dir)
     if dir == nil then
         return working_dir
@@ -2029,7 +2029,7 @@ else
     else
         if System.doesFileExist(wallpaper_table_settings[selectedwall].wallpaper_path) then
             imgCustomBack = Graphics.loadImage(wallpaper_table_settings[selectedwall].wallpaper_path)
-            Graphics.setImageFilters(imgCustomBack, FILTER_LINEAR, FILTER_LINEAR)
+            -- Graphics.setImageFilters(imgCustomBack, FILTER_LINEAR, FILTER_LINEAR)
             Render.useTexture(modBackground, imgCustomBack)
         end
     end
@@ -5158,6 +5158,8 @@ function listDirectory(dir)
                     or string.match(file.name, "%.ccd")
                     or string.match(file.name, "%.pbp")
                     or string.match(file.name, "%.PBP")
+                    or string.match(file.name, "%.chd")
+                    or string.match(file.name, "%.CHD")
                     -- and string.match(file.name, "%.") -- has an extension 
                     and not string.match(file.name, "eboot.pbp") 
                     and not string.match(file.name, "EBOOT.PBP")
@@ -5374,6 +5376,8 @@ function listDirectory(dir)
                             or string.match(file_subfolder.name, "%.ccd")
                             or string.match(file_subfolder.name, "%.pbp")
                             or string.match(file_subfolder.name, "%.PBP")
+                            or string.match(file_subfolder.name, "%.chd")
+                            or string.match(file_subfolder.name, "%.CHD")
                             -- and string.match(file_subfolder.name, "%.") -- has an extension
                             and not string.match(file_subfolder.name, "eboot.pbp") 
                             and not string.match(file_subfolder.name, "EBOOT.PBP")
@@ -6678,8 +6682,8 @@ function listDirectory(dir)
     
     -- SCAN ROMS
     -- Scan_Type        (def,  def_table_name)
-    scan_Rom_PS1_Eboot  (SystemsToScan[4].romFolder, "psx.lua") -- Retroarch rom folder
-    Scan_Rom_PS1            (4, psx_table)
+    scan_Rom_PS1_Eboot  (SystemsToScan[4].romFolder, "psx.lua") 
+    Scan_Rom_PS1            (4, psx_table) -- Retroarch rom folder
     Scan_Rom_Simple         (5, n64_table)
     Scan_Rom_Simple         (6, snes_table)
     Scan_Rom_Simple         (7, nes_table)
@@ -7639,7 +7643,7 @@ function temp_import_homebrew_cleanup()
     if showHomebrews == 0 then
         import_cached_DB_homebrews_in_collections("db_homebrews.lua", homebrews_table)
     else
-        import_cached_DB_tables("db_homebrews.lua", homebrews_table)
+        -- import_cached_DB_tables("db_homebrews.lua", homebrews_table)
     end
 end
 
@@ -8636,7 +8640,6 @@ local function DrawCover(x, y, text, icon, sel, apptype)
         -- left side view
         zoom = -0.6
         extray = -0.3
-        camX = 1
 
         if smoothScrolling == 1 then
             -- Smooth scrolling is on
@@ -8669,6 +8672,8 @@ local function DrawCover(x, y, text, icon, sel, apptype)
                 extrax = -10
             end
         end
+
+        extrax = extrax - 1 --move to the left
 
     elseif showView == 4 then
         -- scroll around
